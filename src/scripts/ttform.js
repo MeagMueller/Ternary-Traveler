@@ -1,3 +1,5 @@
+
+// Creating form for new information
 const ttform = {
     addNewTravelPointForm() {
         const newTravelPointDisplay = document.createElement("section")
@@ -11,13 +13,23 @@ const ttform = {
         newTravelNameInput.setAttribute = ("id", "newTravelNameInput")
         newTravelPointDisplay.appendChild(newTravelNameInput)
 
-        const newTravenDestinationLabel = document.createElement("label")
+        const newTravelDestinationLabel = document.createElement("label")
+        newTravelDestinationLabel.textContent = ("Destination")
         newTravelPointDisplay.appendChild(newTravelDestinationLabel)
 
         const newTravelDescriptionInput = document.createElement("input")
         newTravelDestinationInput.setAttribute = ("id", "newTravelDestinationInput")
         newTravelPointDisplay.appendChild(newTravelDescriptionInput)
 
+        const newTravelCostLabel = document.createElement("label")
+        newTravelCostLabel.textContent = ("Cost")
+        newTravelPointDisplay.appendChild(newTravelCostLabel)
+
+        const newTravelCostInput = document.createElement("input")
+        newTravelCostInput.setAttribute = ("id", "newTravelCostInput")
+        newTravelPointDisplay.appendChild(newTravelCostInput)
+
+        const newPlaceDropdown = document.createElement("select")
         
     }
 }
