@@ -2,7 +2,7 @@
 // Creating form for new information
 const travelContainer = document.querySelector("#display-container")
 
-const ttforms = {
+const ttForms = {
 
     addNewTravelButton() {
         const newTravelPointButton = document.createElement("button")
@@ -10,7 +10,16 @@ const ttforms = {
         newTravelPointButton.addEventListener("click", this.addNewTravelPointForm)
         travelContainer.appendChild(newTravelPointButton)
 
-        const newTravelFormSection = document.createElement()
+        const newTravelSection = document.createElement("section")
+        newTravelSection.setAttribute("id", "newTravelSection")
+        travelContainer.appendChild(newTravelSection)
+
+        
+    },
+
+    newInterestPoint() {
+        const name = document.querySelector("#newTravelNameInput")
+        
     },
 
     addNewTravelPointForm() {
@@ -18,7 +27,7 @@ const ttforms = {
         travelContainer.appendChild(newTravelPointDisplay)
 
         const newTravelNameLabel = document.createElement("label")
-        newTravelNameLabel.textContent = ("Name")
+        newTravelNameLabel.textContent = "Name"
         newTravelPointDisplay.appendChild(newTravelNameLabel)
 
         const newTravelNameInput = document.createElement("input")
@@ -26,7 +35,7 @@ const ttforms = {
         newTravelPointDisplay.appendChild(newTravelNameInput)
 
         const newTravelDestinationLabel = document.createElement("label")
-        newTravelDestinationLabel.textContent = ("Destination")
+        newTravelDestinationLabel.textContent = "Destination"
         newTravelPointDisplay.appendChild(newTravelDestinationLabel)
 
         const newTravelDescriptionInput = document.createElement("input")
@@ -34,7 +43,7 @@ const ttforms = {
         newTravelPointDisplay.appendChild(newTravelDescriptionInput)
 
         const newTravelCostLabel = document.createElement("label")
-        newTravelCostLabel.textContent = ("Cost")
+        newTravelCostLabel.textContent = "Cost"
         newTravelPointDisplay.appendChild(newTravelCostLabel)
 
         const newTravelCostInput = document.createElement("input")
@@ -43,6 +52,27 @@ const ttforms = {
 
         const newPlaceDropdown = document.createElement("select")
         newPlaceDropdown.setAttribute = ("id", "newPlaceDropdown")
+
+        const saveTravelPointButton = document.createElement("button")
+        saveTravelPointButton.textContent = "Save"
+        saveTravelPointButton.addEventListener("click", () => {
+            ttForms.newInterestPoint()
+            .then((saveTravel) => {
+                ttForms.createInterestList()
+            })
+        })
+        newTravelPointDisplay.appendChild(saveTravelPointButton)
+    },
+    
+    createInterestList(list) {
+        const interestsDisplayContainer = document.createElement("div")
+        
+        const editButton = document.createElement("button")
+        editButton.textContent = "Edit"
+
+        const deleteButton = document.createElement("button")
+        deleteButton.textContent = "Delete"
+
 
     }
 }
