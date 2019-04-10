@@ -1,9 +1,21 @@
 
 // Creating form for new information
-const ttform = {
+const travelContainer = document.querySelector("#display-container")
+
+const ttforms = {
+
+    addNewTravelButton() {
+        const newTravelPointButton = document.createElement("button")
+        newTravelPointButton.textContent = ("Add New Destination")
+        newTravelPointButton.addEventListener("click", this.addNewTravelPointForm)
+        travelContainer.appendChild(newTravelPointButton)
+
+        const newTravelFormSection = document.createElement()
+    },
+
     addNewTravelPointForm() {
         const newTravelPointDisplay = document.createElement("section")
-        display-container.appendChild(newTravelPointDisplay)
+        travelContainer.appendChild(newTravelPointDisplay)
 
         const newTravelNameLabel = document.createElement("label")
         newTravelNameLabel.textContent = ("Name")
@@ -30,8 +42,9 @@ const ttform = {
         newTravelPointDisplay.appendChild(newTravelCostInput)
 
         const newPlaceDropdown = document.createElement("select")
-        
+        newPlaceDropdown.setAttribute = ("id", "newPlaceDropdown")
+
     }
 }
 
-export default ttform
+export default ttforms
