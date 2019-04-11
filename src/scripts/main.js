@@ -3,3 +3,10 @@
 // 3. user wants to change point of interest, perform gesture to edit, present user with prefilled form if not previously blank and affordance to save
 // 4. give user ability to delete from interest display
 // 5. give user confirmation ("are you sure") to delete or not - cancel should not delete 
+
+console.log("Hey. You got through yesterday, and then today. Great job.")
+
+import calls from "./ttcalls.js"
+import forms from "./ttform.js"
+
+

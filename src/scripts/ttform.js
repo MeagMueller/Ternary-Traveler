@@ -77,4 +77,4 @@ const ttForms = {
     }
 }
 
-export default ttforms
+export default ttForms
